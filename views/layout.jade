@@ -1,17 +1,24 @@
 !!!
-html
+html(lang='fr')
   head
     title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='http://code.jquery.com/jquery.js')
+    script(src='/javascripts/bootstrap.min.js')
   body
-      block nav
-         if (user == null)
-            ul
-               li
-                  a(href="/auth/google") Se connecter avec Google
-               li
-                  a(href="/auth/yandex") Se connecter avec Yandex
-         else
-            a(href="/logout") Se déconnecter
-      block content
+      div.row
+         block nav
+            div#nav.col-lg-2
+               if (user == null)
+                  ul.list-unstyled
+                     li
+                        a(href="/auth/google") Se connecter avec Google
+                     li
+                        a(href="/auth/yandex") Se connecter avec Yandex
+               else
+                  a(href="/logout") Se déconnecter
+            div#content.col-lg-10
+               block content
+
 
