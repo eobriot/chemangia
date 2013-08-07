@@ -1,0 +1,17 @@
+!!!
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+      block nav
+         if (user == null)
+            ul
+               li
+                  a(href="/auth/google") Se connecter avec Google
+               li
+                  a(href="/auth/yandex") Se connecter avec Yandex
+         else
+            a(href="/logout") Se déconnecter
+      block content
+

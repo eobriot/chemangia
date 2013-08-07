@@ -1,13 +1,17 @@
 {
-   "name": "chemangia",
-   "description": "Menu planner",
-   "version": "0.0.1",
-   "private": true,
-   "repository" : {
-      "type" : "git",
-      "url" : "https://github.com/eobriot/chemangia.git"
-   },
-   "dependencies": {
+    "name": "chemangia"
+  , "version": "0.0.1"
+  , "private": true
+  , "repository" : {
+      "type" : "git"
+      , "url" : "https://github.com/eobriot/chemangia.git"
+  }
+  , "dependencies": {
       "express": "3.x"
-   }
+    , "jade": ">= 0.0.1"
+    , "passport" : "x"
+    , "passport-google-oauth" : "x"
+    , "passport-yandex" : "x"
+    , "mongoose" : "x"
+  }
 }
